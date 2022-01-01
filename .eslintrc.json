@@ -4,16 +4,18 @@
         "es2021": true
     },
     "extends": [
+        "eslint:recommended",
         "plugin:react/recommended",
-        "airbnb",
-        "airbnb-typescript"
+        "plugin:@typescript-eslint/recommended",
+        "eslint:recommended", 
+        "plugin:react/recommended", 
+        "plugin:prettier/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
         },
-        "project": ["tsconfig.json"],
         "ecmaVersion": 13,
         "sourceType": "module"
     },
@@ -22,7 +24,9 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".ts"] }]
-        
+        "react/react-in-jsx-scope": "off",
+        "prettier/prettier": ["error",{
+        "endOfLine": "auto"}
+        ]
     }
 }
